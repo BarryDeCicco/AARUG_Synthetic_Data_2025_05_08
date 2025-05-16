@@ -1,10 +1,11 @@
 ---
 title: "Introduction to Synthetic Data in R"
 author: "Barry DeCicco"
-format: revealjs
-editor: visual
+format: 
+  revealjs
     theme: simple
     slide-number: true
+editor: visual
 ---
 
 ## Quarto
