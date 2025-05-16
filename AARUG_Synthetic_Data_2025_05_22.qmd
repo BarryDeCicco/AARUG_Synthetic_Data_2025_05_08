@@ -2,11 +2,9 @@
 title: "Introduction to Synthetic Data in R"
 author: "Barry DeCicco"
 format: 
-  revealjs
-    theme: 
-      simple
-    slide-number: 
-      true
+  revealjs:
+    theme: simple
+    slide-number: true
 editor: visual
 ---
 
