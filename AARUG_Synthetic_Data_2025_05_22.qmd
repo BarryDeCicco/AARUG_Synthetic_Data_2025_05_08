@@ -2,6 +2,7 @@
 title: "Introduction to Synthetic Data in R"
 author: "Barry DeCicco"
 format: revealjs
+  - docx-landscape.lua
 editor: visual
 ---
 
