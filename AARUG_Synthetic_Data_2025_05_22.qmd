@@ -35,14 +35,20 @@ When you click the **Render** button a presentation will be generated that inclu
 
 -   [synthpop: Bespoke Creation of Synthetic Data in R](https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf)
 
--   [Sample synthesis with synthpop](https://www.synthpop.org.uk/assets/firstsynthesis.r)[simPop: Simulation of Complex Synthetic Data Information](https://cran.r-project.org/web/packages/simPop/index.html)
+-   [Sample synthesis with synthpop](https://www.synthpop.org.uk/assets/firstsynthesis.r)
+
+-   [simPop: Simulation of Complex Synthetic Data Information](https://cran.r-project.org/web/packages/simPop/index.html)
 
 -   [Synthetic data in R: Generating synthetic data with high utility using mice](https://www.gerkovink.com/miceVignettes/synthetic/synthetic.html)
 
 -   [Statistical disclosure control and synthetic data generation using R (YouTube)](https://www.youtube.com/watch?v=5OlQsvD0Eho)
 
+-   [Little Miss Data: Explore Your Dataset in R](https://www.littlemissdata.com/blog/simple-eda)
+
+-   [Skimr: A R Package to Skim Summary Data Effortlessly](https://cmdlinetips.com/2018/03/skimr-a-r-package-to-skim-summary-data-effortlessly/)
+
 -   [R Tutorial: Data Synthesis (Data Camp Tutorial)](https://www.youtube.com/watch?v=wDWHvk0XPjY)
 
 -   [Simulation of Synthetic Complex Data: The R Package simPop](https://www.jstatsoft.org/article/view/v079i10)
 
--   [https://cran.r-project.org/web/packages/simPop/index.html](simPop: Simulation of Complex Synthetic Data Information)
+-   [https://cran.r-project.org/web/packages/simPop/index.html](simPop:%20Simulation%20of%20Complex%20Synthetic%20Data%20Information)
