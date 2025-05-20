@@ -24,10 +24,14 @@ Synthetic data is data created based on a source data set, with individual value
 
 -   Obtain multivariate statistics from data, use to generate data with those distributions (can be tedious or involve a lot of coding).
 
--   When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+## Less Crude Methods
 
-```{r}
-1 + 1
+-   If a set of desired rules is known, generate data based on those rules:
+
+```{r demostration_only}}
+#| echo: true
+
+df %>% mutate(weight = height* 1.7*(male))
 ```
 
 ## References
