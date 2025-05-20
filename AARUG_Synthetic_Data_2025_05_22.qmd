@@ -12,9 +12,13 @@ editor: visual
 
 Synthetic data is data created based on a source data set, with individual values changed, but with the same univariate distributions and multivariate relationship.
 
+## Why Use Synthetic Data?
 
+-   A common reason is to allow others to explore and analyze a data sets without compromising participant privacy by releasing identifying information.
 
-## Bullets
+-   Another reason would be to allow multiple analyses to be conducted on similar data sets, for learning or testing methods and models.
+
+## Crude Methods
 
 When you click the **Render** button a document will be generated that includes:
 
