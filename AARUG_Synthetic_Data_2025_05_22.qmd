@@ -20,14 +20,11 @@ Synthetic data is data created based on a source data set, with individual value
 
 ## Crude Methods
 
--    
+-   Obtain simple descriptive statistics from data, use to generate data with those distributions (breaks multivariate relationships!)
 
--   Content authored with markdown
--   Output from executable code
+-   Obtain multivariate statistics from data, use to generate data with those distributions (can be tedious or involve a lot of coding).
 
-## Code
-
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+-   When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
 1 + 1
@@ -58,3 +55,5 @@ When you click the **Render** button a presentation will be generated that inclu
 -   [Simulation of Synthetic Complex Data: The R Package simPop](https://www.jstatsoft.org/article/view/v079i10)
 
 -   [https://cran.r-project.org/web/packages/simPop/index.html](simPop:%20Simulation%20of%20Complex%20Synthetic%20Data%20Information)
+
+-   [Synthetic Data Generation: A Hands-On Guide in Python (Data Camp tutorial)](https://www.datacamp.com/tutorial/synthetic-data-generation)
