@@ -20,7 +20,7 @@ Synthetic data is data created based on a source data set, with individual value
 
 ## Crude Methods
 
-When you click the **Render** button a document will be generated that includes:
+-    
 
 -   Content authored with markdown
 -   Output from executable code
