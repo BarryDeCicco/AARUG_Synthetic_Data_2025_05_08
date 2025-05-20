@@ -28,10 +28,10 @@ Synthetic data is data created based on a source data set, with individual value
 
 -   If a set of desired rules is known, generate data based on those rules:
 
-```{r demostration_only}}
+```{r demonstration_only}}
 #| echo: true
 
-df %>% mutate(weight = height* 1.7*(male))
+# df %>% mutate(weight = height* 1.7*(male))
 ```
 
 ## References
