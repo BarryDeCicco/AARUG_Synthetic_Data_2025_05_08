@@ -35,6 +35,10 @@ When you click the **Render** button a presentation will be generated that inclu
 
 -   [synthpop: Bespoke Creation of Synthetic Data in R](https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf)
 
+-   [Sample synthesis with synthpop](https://www.synthpop.org.uk/assets/firstsynthesis.r)
+
 -   [Synthetic data in R: Generating synthetic data with high utility using mice](https://www.gerkovink.com/miceVignettes/synthetic/synthetic.html)
 
--   
+-   [Statistical disclosure control and synthetic data generation using R (YouTube)](https://www.youtube.com/watch?v=5OlQsvD0Eho)
+
+-   [R Tutorial: Data Synthesis (Data Camp Tutorial)](https://www.youtube.com/watch?v=wDWHvk0XPjY)
