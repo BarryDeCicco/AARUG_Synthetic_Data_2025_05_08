@@ -8,9 +8,11 @@ format:
 editor: visual
 ---
 
-## Quarto
+## What is Synthetic Data?
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+Synthetic data is data created based on a source data set, with individual values changed, but with the same univariate distributions and multivariate relationship.
+
+
 
 ## Bullets
 
