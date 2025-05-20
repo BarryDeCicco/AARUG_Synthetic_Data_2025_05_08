@@ -28,3 +28,13 @@ When you click the **Render** button a presentation will be generated that inclu
 ```
 
 ## References
+
+-   [Exploring Synthetic Data in R](https://medium.com/@sdshwetadixit/exploring-synthetic-data-in-r-8834d4217865)
+
+-   [About Synthpop](https://www.synthpop.org.uk/get-started.html)
+
+-   [synthpop: Bespoke Creation of Synthetic Data in R](https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf)
+
+-   [Synthetic data in R: Generating synthetic data with high utility using mice](https://www.gerkovink.com/miceVignettes/synthetic/synthetic.html)
+
+-   
