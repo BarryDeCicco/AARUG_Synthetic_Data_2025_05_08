@@ -44,7 +44,9 @@ Synthetic data is data created based on a source data set, with individual value
 
 ## Synthpop
 
-An R package called 'synthpop' will be used as a demonstration here
+An R package called 'synthpop' will be used as a demonstration here ([synthpop: Bespoke Creation of Synthetic Data in R (Nowok, Raab, Dibbern)](https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf) . This was developed in the UK, to deal with certain surveys.
+
+Goal: the surveys use 'microdata', individual-level administrative data, which is confidential, and not to be released except to a small number of researchers. This was not desirable, and so a project, SYLLS, was developed to generate synthetic data sets usable by researchers who don't have access to the original data. Another package, simPop ([Meindl B, Templ M, Alfons A, Kowarik A (2016)](#0) was later developed. In addition, the missing data software IVEware for SAS and SRCware both include a 'Syntesize module to produce synthetic data. These work by imputing all values in the original data set, to produce a synthesized data set, and include the ability to work with weighted/clustered/stratified samples.
 
 ## References
 
