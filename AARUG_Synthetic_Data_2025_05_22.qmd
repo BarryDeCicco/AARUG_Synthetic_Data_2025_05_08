@@ -83,14 +83,19 @@ Synthetic data is data created based on a source data set, with individual value
 -   In this presentation, the sample script produced an object, 'mysin', which was a list, containing a lot of information about the output and methods. I used the str() command, and extracted \$syn from it, which was a data frame.
 -   There is a 'compare()' function in synthpop, which can be used to compare the orignal and synthesized data sets.
 
-# Reloading Data Frames
+# Comparing Data Sets:
 
-```{r}
+R has multiple commands to compare data sets. Here, we will use the Comparedf() from the 'Arsenal' package.
+
+
+```{r reload_data_sets}
+#| echo: true
+
 mysyn_dataframe_reloaded <- readRDS("mysyn_dataframe.rds")
 mydata_dataframe_reloaded <- readRDS("mydata_dataframe.rds")
 
-head(mysyn_dataframe_reloaded)
-head(mydata_dataframe_reloaded)
+# head(mysyn_dataframe_reloaded)
+# head(mydata_dataframe_reloaded)
 
 
 ```
