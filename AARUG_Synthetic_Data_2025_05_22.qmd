@@ -85,7 +85,7 @@ Synthetic data is data created based on a source data set, with individual value
 
 # Comparing Data Sets:
 
-R has multiple commands to compare data sets. Here, we will use the Comparedf() from the 'Arsenal' package.
+R has multiple commands to compare data sets. Here, we will use the Comparedf() from the 'Arsenal' package. This is separate from the 'compare()' command from the synthpop package.
 
 
 ```{r reload_data_sets}
@@ -100,9 +100,8 @@ mydata_dataframe_reloaded <- readRDS("mydata_dataframe.rds")
 
 ```
 
-## Analysis (con.)
 
--   The syn()
+
 
 ## References
 
