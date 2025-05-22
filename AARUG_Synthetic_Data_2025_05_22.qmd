@@ -42,9 +42,11 @@ Synthetic data is data created based on a source data set, with individual value
 -   This assumes that you know the rules to use. If you don't know, are estimating the relationships from the data, then you have all of the problems with the original method for univariate estimation, but can better preserve multivariate relationships.
 -   This works best when there are a small number of columns on interest.
 
-## References
+## Synthpop
 
--   [Exploring Synthetic Data in R](https://medium.com/@sdshwetadixit/exploring-synthetic-data-in-r-8834d4217865)
+An R package called 'synthpop' will be used as a demonstration here
+
+## References
 
 -   [About Synthpop](https://www.synthpop.org.uk/get-started.html)
 
@@ -57,6 +59,8 @@ Synthetic data is data created based on a source data set, with individual value
 -   [Synthetic data in R: Generating synthetic data with high utility using mice](https://www.gerkovink.com/miceVignettes/synthetic/synthetic.html)
 
 -   [Statistical disclosure control and synthetic data generation using R (YouTube)](https://www.youtube.com/watch?v=5OlQsvD0Eho)
+
+-   [Exploring Synthetic Data in R](https://medium.com/@sdshwetadixit/exploring-synthetic-data-in-r-8834d4217865)
 
 -   [Little Miss Data: Explore Your Dataset in R](https://www.littlemissdata.com/blog/simple-eda)
 
