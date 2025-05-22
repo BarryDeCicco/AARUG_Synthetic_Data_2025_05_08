@@ -22,10 +22,15 @@ Synthetic data is data created based on a source data set, with individual value
 
 -   Obtain simple descriptive statistics from data, use to generate data with those distributions (breaks multivariate relationships!)
 
--   Obtain multivariate statistics from data, use to generate data with those distributions (can be tedious or involve a lot of coding).
+-   There are two obvious problems:
+
+    -   You are taking sample estimates and an estimated chosen) distribution and then sampling from that. This could add error.
+
+    -   Doing this by column will break the multivariate distributions in the column (e.g., sex vs weight), which loses most of the information from the data set.
 
 ## Less Crude Methods
 
+-   Obtain multivariate statistics from data, use to generate data with those distributions (can be tedious or involve a lot of coding).
 -   If a set of desired rules is known, generate data based on those rules:
 
 ```{r demonstration_only}}
@@ -33,6 +38,9 @@ Synthetic data is data created based on a source data set, with individual value
 
 # df %>% mutate(weight = height* 1.7*(male))
 ```
+
+-   This assumes that you know the rules to use. If you don't know, are estimating the relationships from the data, then you have all of the problems with the original method for univariate estimation, but can better preserve multivariate relationships.
+-   This works best when there are a small number of columns on interest.
 
 ## References
 
