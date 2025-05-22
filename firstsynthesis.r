@@ -1,3 +1,6 @@
+
+# This file is from: https://www.synthpop.org.uk/assets/firstsynthesis.r
+
 install.packages("synthpop")
 
 library("synthpop")
