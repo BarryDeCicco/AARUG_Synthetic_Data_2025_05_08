@@ -16,7 +16,7 @@
 library(arsenal)
 
 
-arsenal::comparedf(mysyn_dataframe,mydata_dataframe)
+summary(comparedf(mysyn_dataframe,mydata_dataframe))
 
 
 
