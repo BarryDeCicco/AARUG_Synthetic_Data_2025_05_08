@@ -66,7 +66,7 @@ Synthetic data is data created based on a source data set, with individual value
 
 ## Generation
 
-= One by one, the columns in y are generated from an assumed distribution <i>f</i>(Y\|xobs, <i>theta</i>)
+-   One by one, the columns in y are generated from an assumed distribution <i>f</i>(Y\|xobs, <i>theta</i>)
 
 ## References
 
