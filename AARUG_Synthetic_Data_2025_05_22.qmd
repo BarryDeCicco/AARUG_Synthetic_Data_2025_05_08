@@ -100,7 +100,14 @@ mydata_dataframe_reloaded <- readRDS("mydata_dataframe.rds")
 
 ```
 
+### Comparing using the synthpop 'compare' function:
 
+```{r compare_data_sets}
+#| echo: true
+
+synthpop::compare(mysyn_dataframe_reloaded,mydata_dataframe_reloaded)
+
+```
 
 
 ## References
