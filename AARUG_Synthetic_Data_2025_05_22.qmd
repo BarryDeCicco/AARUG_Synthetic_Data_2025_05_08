@@ -83,14 +83,22 @@ Synthetic data is data created based on a source data set, with individual value
 -   In this presentation, the sample script produced an object, 'mysin', which was a list, containing a lot of information about the output and methods. I used the str() command, and extracted \$syn from it, which was a data frame.
 -   There is a 'compare()' function in synthpop, which can be used to compare the orignal and synthesized data sets.
 
-``` r
+```{r}
+mysyn_dataframe_reloaded <- readRDS("mysyn_dataframe.rds")
+mydata_dataframe_reloaded <- readRDS("mydata_dataframe.rds")
+
+head(mysyn_dataframe_reloaded)
+head(mydata_dataframe_reloaded)
+
+
 ```
+
 
 ## Analysis (con.)
 
 -   The syn()
 
-## References
+## [Compardf - a Git Style Comparison Function](https://www.rdocumentation.org/packages/compareDF/versions/2.3.5)References
 
 -   [About Synthpop](https://www.synthpop.org.uk/get-started.html)
 
@@ -120,4 +128,10 @@ Synthetic data is data created based on a source data set, with individual value
 
 -   [Synthetic Data Generation: A Hands-On Guide in Python (Data Camp tutorial)](https://www.datacamp.com/tutorial/synthetic-data-generation)
 
+### Inspecting data frames, comparisons and profiling:
+
 -   [Statistical Analysis with Missing Data, Third Edition (Little and Rubin)](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119482260))
+
+-   [Display a Beautiful Summary Statistics in R using Skimr Package](https://www.datanovia.com/en/blog/display-a-beautiful-summary-statistics-in-r-using-skimr-package/)
+
+-   [Simple EDA in R with inspectdf](https://www.littlemissdata.com/blog/inspectdf?rq=comparing)
