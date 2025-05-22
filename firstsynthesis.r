@@ -1,9 +1,7 @@
 
 # This file is from: https://www.synthpop.org.uk/assets/firstsynthesis.r
 
-install.packages("synthpop")
-
-library("synthpop")
+# install.packages("synthpop")
 
 #--------------------------------------------------------#
 # Sample synthesis with only a modest numer of variables #
