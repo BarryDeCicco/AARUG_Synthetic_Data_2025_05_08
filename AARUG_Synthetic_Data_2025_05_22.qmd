@@ -52,6 +52,20 @@ Synthetic data is data created based on a source data set, with individual value
 
 -   Another package, simPop ([Meindl B, Templ M, Alfons A, Kowarik A (2016)](#0) was later developed. In addition, the missing data software IVEware for SAS and SRCware both include a 'Synthesize' module to produce synthetic data. These work by imputing all values in the original data set, to produce a synthesized data set, and include the ability to work with weighted/clustered/stratified samples.
 
+## Conceptual Overview
+
+-   The assumption is that the data set to be synthesived consists of n rows, with columns divided into (x, y), where x is a set of columns which can be released publicly, vs y, which is a set of columns which can not be released publicly. The set of columns x might not contain any columns (i.e., the entire data set might not be publicly releasable).
+
+-   For this presentation, ignore any survey design effects, clustering, stratification, and assume simple random sampling.
+
+-   For this presentation, the parameters for the sampling distributions are derived from the observed data, and used directly ('simple synthesis').
+
+-   If instead the the parameters for the sampling distributions are derived posterior sampling on a presumed distribution of parameters, that would be 'proper synthesis'.
+
+## Generation
+
+= One by one, the columns in y are generated from an assumed distribution $f(Y|xobs, \Theta)
+
 ## References
 
 -   [About Synthpop](https://www.synthpop.org.uk/get-started.html)
