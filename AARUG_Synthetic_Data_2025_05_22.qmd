@@ -58,10 +58,12 @@ Synthetic data is data created based on a source data set, with individual value
 
 -   For this presentation, ignore any survey design effects, clustering, stratification, and assume simple random sampling.
 
--   For this presentation, the parameters for the sampling distributions are derived from the observed data, and used directly ('simple synthesis').
+
 
 ## Conceptual Overview (con.)
 -   If instead the the parameters for the sampling distributions are derived posterior sampling on a presumed distribution of parameters, that would be 'proper synthesis'.
+
+-   For this presentation, the parameters for the sampling distributions are derived from the observed data, and used directly ('simple synthesis').
 
 ## Generation
 
