@@ -15,7 +15,15 @@
 
 library(arsenal)
 
-summary(comparedf(mysyn_dataframe, mydata_dataframe))
+
+arsenal::comparedf(mysyn_dataframe,mydata_dataframe)
+
+
+
+## Comparing using the synthpop 'compare' function:
+
+synthpop::compare(mysyn,mydata)
+
 
 
 
