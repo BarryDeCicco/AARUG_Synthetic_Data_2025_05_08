@@ -32,5 +32,13 @@ table(mydata$income[mydata$income < 0], useNA = "ifany")
 # missingness by setting cont.na for income
 mysyn <- syn(mydata, cont.na = list(income = -8))  # default syntheis but adding -8 missing values for income
 
+
 summary(mysyn)
 compare(mysyn, mydata, stat = "counts")
+
+# compare the original and synthesized data sets:
+
+compare(mysyn, mydata, stat = "counts")
+
+
+
