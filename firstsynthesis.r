@@ -34,8 +34,18 @@ mysyn <- syn(mydata, cont.na = list(income = -8))  # default syntheis but adding
 
 
 summary(mysyn)
-compare(mysyn, mydata, stat = "counts")
 
+# Convert everything to data setss:
+
+mysyn_dataframe <- as.data.frame(mysyn$syn)
+mydata_dataframe <- as.data.frame(mydata)
+is.data.frame(mysyn_dataframe)
+is.data.frame(mydata_dataframe)
+
+# save data sets for later reuse:
+
+saveRDS(mysyn_dataframe, file = "mysyn_dataframe.rds")
+saveRDS(mydata_dataframe, file = "mydata_dataframe.rds")
 # compare the original and synthesized data sets:
 
 compare(mysyn, mydata, stat = "counts")
