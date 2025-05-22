@@ -51,4 +51,10 @@ saveRDS(mydata_dataframe, file = "mydata_dataframe.rds")
 compare(mysyn, mydata, stat = "counts")
 
 
+library(arsenal)
+
+
+summary(comparedf(mysyn_dataframe,mydata_dataframe))
+
+
 
