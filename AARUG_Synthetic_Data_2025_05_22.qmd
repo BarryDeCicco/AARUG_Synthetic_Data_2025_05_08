@@ -83,9 +83,19 @@ Synthetic data is data created based on a source data set, with individual value
 -   In this presentation, the sample script produced an object, 'mysin', which was a list, containing a lot of information about the output and methods. I used the str() command, and extracted \$syn from it, which was a data frame.
 -   There is a 'compare()' function in synthpop, which can be used to compare the orignal and synthesized data sets.
 
-# Comparing Data Sets:
+## Comparing Data Sets:
 
-R has multiple commands to compare data sets. Here, we will use the Comparedf() from the 'Arsenal' package. This is separate from the 'compare()' command from the synthpop package.
+R has multiple commands to compare data sets. Here, we will use the comparedf() from the 'Arsenal' package. This is separate from the 'compare()' command from the synthpop package.
+
+
+## Comparing using the 'comparedf' function:
+
+```{r comparedf_data_sets_arsenal}
+#| echo: true
+
+arsenal::comparedf(mysyn_dataframe_reloaded,mydata_dataframe_reloaded)
+
+```
 
 
 ```{r reload_data_sets}
@@ -100,7 +110,7 @@ mydata_dataframe_reloaded <- readRDS("mydata_dataframe.rds")
 
 ```
 
-### Comparing using the synthpop 'compare' function:
+## Comparing using the synthpop 'compare' function:
 
 ```{r compare_data_sets}
 #| echo: true
