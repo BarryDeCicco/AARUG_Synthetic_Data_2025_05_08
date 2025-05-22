@@ -66,9 +66,15 @@ Synthetic data is data created based on a source data set, with individual value
 
 ## Generation
 
--   For simplicity, assume that the set x is empty; all columns are to be synthesized.
+-   T first column in y is generated from an assumed distribution <i>f</i>(Y\|xobs,<i>theta</i>).
 
--   One by one, the columns in y are generated from an assumed distribution <i>f</i>(Y\|xobs, <i>theta</i>)
+-   After that, the second, third,..., columns of y are each generated from an assumed distribution <i>f</i>(Y\|xobs, ysynthesized<i>theta</i>), where y synthesized is the set of already synthesized column in y.
+
+-   The end result is m synthesized data sets, where m is the number of columns in y.
+
+## Analysis
+
+-   These m synthesized data sets can be analyzed using methods deveoped for the analysis of multply imputed data sets (e.g., [Statistical Analysis with Missing Data, Third Edition](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119482260))
 
 ## References
 
@@ -99,3 +105,5 @@ Synthetic data is data created based on a source data set, with individual value
 -   [https://cran.r-project.org/web/packages/simPop/index.html](simPop:%20Simulation%20of%20Complex%20Synthetic%20Data%20Information)
 
 -   [Synthetic Data Generation: A Hands-On Guide in Python (Data Camp tutorial)](https://www.datacamp.com/tutorial/synthetic-data-generation)
+
+-   [Statistical Analysis with Missing Data, Third Edition (Little and Rubin)](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119482260))
