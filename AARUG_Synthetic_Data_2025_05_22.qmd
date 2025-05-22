@@ -74,13 +74,21 @@ Synthetic data is data created based on a source data set, with individual value
 
 -   Methods to perform the generation can be parametric, non-parmetric (e.g., CART) or something simple like resampling.
 
--   The function 'syn()', which peforms the synthesis, has many parameters and options
+-   The function 'syn()', which performs the synthesis, has many parameters and options
 
 ## Analysis
 
 -   These m synthesized data sets can be analyzed using methods deveoped for the analysis of multply imputed data sets (e.g., [Statistical Analysis with Missing Data, Third Edition](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119482260))
 -   The original analyst (with access to the original data) can evaluate the quality of the synthesized data sets with the original data.
--   
+-   In this presentation, the sample script produced an object, 'mysin', which was a list, containing a lot of information about the output and methods. I used the str() command, and extracted \$syn from it, which was a data frame.
+-   There is a 'compare()' function in synthpop, which can be used to compare the orignal and synthesized data sets.
+
+``` r
+```
+
+## Analysis (con.)
+
+-   The syn()
 
 ## References
 
