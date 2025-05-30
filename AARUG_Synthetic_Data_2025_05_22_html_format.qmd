@@ -1,0 +1,161 @@
+---
+title: "Introduction to Synthetic Data in R"
+author: "Barry DeCicco"
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+editor: visual
+---
+
+## What is Synthetic Data?
+
+Synthetic data is data created based on a source data set, with individual values changed, but with the same univariate distributions and multivariate relationship.
+
+## Why Use Synthetic Data?
+
+-   A common reason is to allow others to explore and analyze a data sets without compromising participant privacy by releasing identifying information.
+
+-   Another reason would be to allow multiple analyses to be conducted on similar data sets, for learning or testing methods and models.
+
+## Crude Methods
+
+-   Obtain simple descriptive statistics from data, use to generate data with those distributions (breaks multivariate relationships!)
+
+-   There are two obvious problems:
+
+    -   You are taking sample estimates and an estimated chosen) distribution and then sampling from that. This could add error.
+
+    -   Doing this by column will break the multivariate distributions in the column (e.g., sex vs weight), which loses most of the information from the data set.
+
+## Less Crude Methods
+
+-   Obtain multivariate statistics from data, use to generate data with those distributions (can be tedious or involve a lot of coding).
+-   If a set of desired rules is known, generate data based on those rules:
+
+```{r demonstration_only}}
+#| echo: true
+
+# df %>% mutate(weight = height* 1.7*(male))
+```
+
+-   This assumes that you know the rules to use. If you don't know, are estimating the relationships from the data, then you have all of the problems with the original method for univariate estimation, but can better preserve multivariate relationships.
+-   This works best when there are a small number of columns on interest.
+
+## Synthpop
+
+-   The R package: synthpop will be used as a demonstration here ([synthpop: Bespoke Creation of Synthetic Data in R (Nowok, Raab, Dibbern)](https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf) . This was developed in the UK, to deal with certain surveys.
+
+-   Goal: the surveys use 'microdata', individual-level administrative data, which is confidential, and not to be released except to a small number of researchers. Other features of the data can been released. This was not desirable, and so a project, SYLLS, was developed to generate synthetic data sets usable by researchers who don't have access to the original data.
+
+## Additional work (not covered here):
+
+-   Another package, simPop ([Meindl B, Templ M, Alfons A, Kowarik A (2016)](#0) was later developed. In addition, the missing data software IVEware for SAS and SRCware both include a 'Synthesize' module to produce synthetic data. These work by imputing all values in the original data set, to produce a synthesized data set, and include the ability to work with weighted/clustered/stratified samples.
+
+## Conceptual Overview
+
+-   The assumption is that the data set to be synthesived consists of n rows, with columns divided into (x, y), where x is a set of columns which can be released publicly, vs y, which is a set of columns which can not be released publicly. The set of columns x might not contain any columns (i.e., the entire data set might not be publicly releasable).
+
+-   For this presentation, ignore any survey design effects, clustering, stratification, and assume simple random sampling.
+
+## Conceptual Overview (con.)
+
+-   If instead the the parameters for the sampling distributions are derived posterior sampling on a presumed distribution of parameters, that would be 'proper synthesis'.
+
+-   For this presentation, the parameters for the sampling distributions are derived from the observed data, and used directly ('simple synthesis').
+
+## Generation
+
+-   T first column in y is generated from an assumed distribution <i>f</i>(Y\|xobs,<i>theta</i>).
+
+-   After that, the second, third,..., columns of y are each generated from an assumed distribution <i>f</i>(Y\|xobs, ysynthesized<i>theta</i>), where y synthesized is the set of already synthesized column in y.
+
+-   The end result is m synthesized data sets, where m is the number of columns in y.
+
+-   Methods to perform the generation can be parametric, non-parmetric (e.g., CART) or something simple like resampling.
+
+-   The function 'syn()', which performs the synthesis, has many parameters and options
+
+## Analysis
+
+-   These m synthesized data sets can be analyzed using methods deveoped for the analysis of multply imputed data sets (e.g., [Statistical Analysis with Missing Data, Third Edition](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119482260))
+-   The original analyst (with access to the original data) can evaluate the quality of the synthesized data sets with the original data.
+-   In this presentation, the sample script produced an object, 'mysin', which was a list, containing a lot of information about the output and methods. I used the str() command, and extracted \$syn from it, which was a data frame.
+-   There is a 'compare()' function in synthpop, which can be used to compare the orignal and synthesized data sets.
+
+## Comparing Data Sets:
+
+R has multiple commands to compare data sets. Here, we will use the comparedf() from the 'Arsenal' package. This is separate from the 'compare()' command from the synthpop package.
+
+
+```{r reload_data_sets}
+#| echo: true
+
+mysyn_dataframe_reloaded <- readRDS("mysyn_dataframe.rds")
+mydata_dataframe_reloaded <- readRDS("mydata_dataframe.rds")
+
+# head(mysyn_dataframe_reloaded)
+# head(mydata_dataframe_reloaded)
+
+
+```
+
+
+## Comparing using the 'comparedf' function:
+
+```{r comparedf_data_sets_arsenal}
+#| echo: true
+
+arsenal::comparedf(mysyn_dataframe_reloaded,mydata_dataframe_reloaded)
+
+```
+
+
+## Comparing using the synthpop 'compare' function:
+
+```{r compare_data_sets}
+#| echo: true
+
+synthpop::compare(mysyn_dataframe_reloaded,mydata_dataframe_reloaded)
+
+```
+
+
+## References
+
+-   [About Synthpop](https://www.synthpop.org.uk/get-started.html)
+
+-   [synthpop: Bespoke Creation of Synthetic Data in R](https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf)
+
+-   [Sample synthesis with synthpop](https://www.synthpop.org.uk/assets/firstsynthesis.r)
+
+-   [Shiny app to demonstrate synthpop](https://synthpop.shinyapps.io/synthpop/)
+
+-   [simPop: Simulation of Complex Synthetic Data Information](https://cran.r-project.org/web/packages/simPop/index.html)
+
+-   [Synthetic data in R: Generating synthetic data with high utility using mice](https://www.gerkovink.com/miceVignettes/synthetic/synthetic.html)
+
+-   [Statistical disclosure control and synthetic data generation using R (YouTube)](https://www.youtube.com/watch?v=5OlQsvD0Eho)
+
+-   [Exploring Synthetic Data in R](https://medium.com/@sdshwetadixit/exploring-synthetic-data-in-r-8834d4217865)
+
+-   [Little Miss Data: Explore Your Dataset in R](https://www.littlemissdata.com/blog/simple-eda)
+
+-   [Skimr: A R Package to Skim Summary Data Effortlessly](https://cmdlinetips.com/2018/03/skimr-a-r-package-to-skim-summary-data-effortlessly/)
+
+-   [R Tutorial: Data Synthesis (Data Camp Tutorial)](https://www.youtube.com/watch?v=wDWHvk0XPjY)
+
+-   [Simulation of Synthetic Complex Data: The R Package simPop](https://www.jstatsoft.org/article/view/v079i10)
+
+-   [https://cran.r-project.org/web/packages/simPop/index.html](simPop:%20Simulation%20of%20Complex%20Synthetic%20Data%20Information)
+
+-   [Synthetic Data Generation: A Hands-On Guide in Python (Data Camp tutorial)](https://www.datacamp.com/tutorial/synthetic-data-generation)
+
+-   [Statistical Analysis with Missing Data, Third Edition (Little and Rubin)](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119482260))
+
+### Inspecting data frames, comparisons and profiling:
+-   [Display a Beautiful Summary Statistics in R using Skimr Package](https://www.datanovia.com/en/blog/display-a-beautiful-summary-statistics-in-r-using-skimr-package/)
+
+-   [Simple EDA in R with inspectdf](https://www.littlemissdata.com/blog/inspectdf?rq=comparing)
+
+-   [Compardf - a Git Style Comparison Function](https://www.rdocumentation.org/packages/compareDF/versions/2.3.5)
