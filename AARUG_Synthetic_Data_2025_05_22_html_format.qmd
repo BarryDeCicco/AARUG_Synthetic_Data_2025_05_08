@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Synthetic Data in R"
 author: "Barry DeCicco"
-title: "Untitled"
 format: html
 editor: visual
 ---
