@@ -1,10 +1,8 @@
 ---
 title: "Introduction to Synthetic Data in R"
 author: "Barry DeCicco"
-format: 
-  revealjs:
-    theme: simple
-    slide-number: true
+title: "Untitled"
+format: html
 editor: visual
 ---
 
@@ -87,7 +85,6 @@ Synthetic data is data created based on a source data set, with individual value
 
 R has multiple commands to compare data sets. Here, we will use the comparedf() from the 'Arsenal' package. This is separate from the 'compare()' command from the synthpop package.
 
-
 ```{r reload_data_sets}
 #| echo: true
 
@@ -100,7 +97,6 @@ mydata_dataframe_reloaded <- readRDS("mydata_dataframe.rds")
 
 ```
 
-
 ## Comparing using the 'comparedf' function:
 
 ```{r comparedf_data_sets_arsenal}
@@ -110,7 +106,6 @@ arsenal::comparedf(mysyn_dataframe_reloaded,mydata_dataframe_reloaded)
 
 ```
 
-
 ## Comparing using the synthpop 'compare' function:
 
 ```{r compare_data_sets}
@@ -119,7 +114,6 @@ arsenal::comparedf(mysyn_dataframe_reloaded,mydata_dataframe_reloaded)
 synthpop::compare(mysyn_dataframe_reloaded,mydata_dataframe_reloaded)
 
 ```
-
 
 ## References
 
@@ -154,6 +148,7 @@ synthpop::compare(mysyn_dataframe_reloaded,mydata_dataframe_reloaded)
 -   [Statistical Analysis with Missing Data, Third Edition (Little and Rubin)](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119482260))
 
 ### Inspecting data frames, comparisons and profiling:
+
 -   [Display a Beautiful Summary Statistics in R using Skimr Package](https://www.datanovia.com/en/blog/display-a-beautiful-summary-statistics-in-r-using-skimr-package/)
 
 -   [Simple EDA in R with inspectdf](https://www.littlemissdata.com/blog/inspectdf?rq=comparing)
